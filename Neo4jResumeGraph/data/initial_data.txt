@@ -1,0 +1,17 @@
+Person: name, email, phone, location, linkedin, github, birthdate, gender
+Education: degree, institution, start_year, end_year
+Experience: title, company, start_date, end_date, location, description
+Skill: name, type
+Extracurricular: activity, role, start_date, end_date, description
+Certification: name
+Language: name, proficiency
+Interest: name
+Relationships:
+  Person-STUDIED_AT->Education
+  Person-WORKED_AT->Experience
+  Experience-USED->Skill
+  Person-HAS_SKILL->Skill
+  Person-PARTICIPATED_IN->Extracurricular
+  Person-HAS_CERTIFICATION->Certification
+  Person-SPEAKS->Language
+  Person-HAS_INTEREST->Interest
